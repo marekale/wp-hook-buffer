@@ -118,6 +118,8 @@ class HookBuffer {
 		if ( $this->get_status() === 'buffering' ) {
 			$this->buffer = ob_get_contents();
 			ob_end_clean();
+			$this->buffer_status = 'finished';
+			$this->remove_actions();
 			if ( $this->output ) {
 				$this->output();
 			}
