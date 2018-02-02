@@ -106,15 +106,15 @@ class HookBuffer {
 		return $this;
 	}
 	
-	public function start_buffering( ) {
+	public function start_buffering( $var=NULL ) {
 		if ( $this->get_status() === 'waiting' ) {
 			$this->buffer_status = 'buffering';
 			ob_start();
 		}	
-		return $this;
+		return $var;
 	}
 	
-	public function stop_buffering( ) {
+	public function stop_buffering( $var=NULL ) {
 		if ( $this->get_status() === 'buffering' ) {
 			$this->buffer = ob_get_contents();
 			ob_end_clean();
@@ -126,7 +126,7 @@ class HookBuffer {
 		}
 		$this->buffer_status = 'finished';
 		$this->remove_actions();
-		return $this;
+		return $var;
 	}
 	
 	public function get_status() {

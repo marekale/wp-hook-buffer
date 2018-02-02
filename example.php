@@ -22,5 +22,6 @@ class CustomWooCommerceEmailContent extends HookBuffer {
     }
 }
 
-// create the instance before 'woocommerce_email_header' hook fires
-new CustomWooCommerceEmailContent('<p>New WooCommerce order</p>');
+// create the instance before 'woocommerce_email_header' hook fires, 
+// and output filtered content just before 'woocommerce_email_order_details' hook
+(new CustomWooCommerceEmailContent('<p>New WooCommerce order</p>'))->output();
