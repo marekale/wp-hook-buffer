@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of class-hook-buffer
+ * Description
  *
  * @author MarekA
  */
