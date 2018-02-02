@@ -21,3 +21,6 @@ class CustomWooCommerceEmailContent extends HookBuffer {
         return $custom_content;
     }
 }
+
+// create the instance before 'woocommerce_email_header' hook fires
+new CustomWooCommerceEmailContent('<p>New WooCommerce order</p>');
