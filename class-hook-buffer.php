@@ -123,9 +123,10 @@ class HookBuffer {
 			if ( $this->output ) {
 				$this->output();
 			}
-		}
-		$this->buffer_status = 'finished';
-		$this->remove_actions();
+		} else {
+                    $this->buffer_status = 'finished';
+                    $this->remove_actions();
+                }
 		return $var;
 	}
 	
