@@ -59,6 +59,39 @@ add_action( 'marale_action_3', function () {
 			HookBuffer::b('buffer4')->get_status(),
 			] : 'Buffer doesn\'t exist',
 	] );
+        
+//        var_dump result:
+//        
+//        array(4) {
+//          ["buffer1"]=>
+//          array(2) {
+//            [0]=>
+//            string(25) "Output in marale_action_1"
+//            [1]=>
+//            string(8) "finished"
+//          }
+//          ["buffer2"]=>
+//          array(2) {
+//            [0]=>
+//            string(25) "Output in marale_action_2"
+//            [1]=>
+//            string(8) "finished"
+//          }
+//          ["buffer3"]=>
+//          array(2) {
+//            [0]=>
+//            string(56) "Output between $b2 instance creation and marale_action_2"
+//            [1]=>
+//            string(8) "finished"
+//          }
+//          ["buffer4"]=>
+//          array(2) {
+//            [0]=>
+//            string(50) "Output between marale_action_2 and marale_action_3"
+//            [1]=>
+//            string(8) "finished"
+//          }
+//        }
 } );
 
 
