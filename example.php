@@ -45,19 +45,19 @@ add_action( 'marale_action_3', function () {
 		'buffer1' => HookBuffer::buffer_exists('buffer1') ? [
 			HookBuffer::b('buffer1')->get(),
 			HookBuffer::b('buffer1')->get_status(),
-			] : 'Nie istnieje',
+			] : 'Buffer doesn\'t exist',
 		'buffer2' => HookBuffer::buffer_exists('buffer2') ? [
 			HookBuffer::b('buffer2')->get(),
 			HookBuffer::b('buffer2')->get_status(),
-			] : 'Nie istnieje',
+			] : 'Buffer doesn\'t exist',
 		'buffer3' => HookBuffer::buffer_exists('buffer3') ? [
 			HookBuffer::b('buffer3')->get(),
 			HookBuffer::b('buffer3')->get_status(),
-			] : 'Nie istnieje',
+			] : 'Buffer doesn\'t exist',
 		'buffer4' => HookBuffer::buffer_exists('buffer4') ? [
 			HookBuffer::b('buffer4')->get(),
 			HookBuffer::b('buffer4')->get_status(),
-			] : 'Nie istnieje',
+			] : 'Buffer doesn\'t exist',
 	] );
 } );
 
