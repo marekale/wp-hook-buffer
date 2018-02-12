@@ -212,6 +212,13 @@ class HookBuffer {
 		
 		return $this;
 	}
+        
+        public function destroy() {
+            $this->stop_buffering();
+            $this->remove_actions();
+            $this->buffer = '';
+            unset( self::$buffers[ $this->buffer_name ] );
+        }
 }
 
 endif;
