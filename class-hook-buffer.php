@@ -192,7 +192,7 @@ class HookBuffer {
 		return $this;
 	}
 	
-	public function remove_actions() {
+	public function remove_actions( $var=NULL ) {
 		if ( current_filter() !== $this->tag2 ) {
 			return;
 		} 
@@ -210,7 +210,7 @@ class HookBuffer {
 				[ $this, 'remove_actions' ],
 				$this->remove_actions_priority );
 		
-		return $this;
+		return $var;
 	}
         
         public function destroy() {
